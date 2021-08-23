@@ -1,11 +1,36 @@
 {
   "name": "simple-vue-grid",
+  "description": "A simple Vue.js grid containers that will make your life easier.",
   "version": "0.1.0",
   "private": false,
+  "main": "./dist/simple-vue-grid.common.js",
+  "repository": "https://github.com/harmyderoman/simple-vue-grid",
+  "bugs": "https://github.com/harmyderoman/simple-vue-grid/issues",
+  "keywords": [
+    "Vue.js",
+    "grid",
+    "layout",
+    "container"
+  ],
+  "license": "Apache",
+  "author": {
+    "name": "Roman Harmyder",
+    "email": "romangarmider@gmail.com",
+    "url": "https://github.com/harmyderoman"
+  },
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js",
+    "README.md"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve --open example/main",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "build-library": "vue-cli-service build --target lib --name simple-vue-grid ./src/install.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
