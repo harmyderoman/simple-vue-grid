@@ -1,12 +1,12 @@
 # simple-vue-grid
 
-This plugin include containers that will help you to build excellent layout for your app.
+This plugin includes containers that will help you to build excellent layout for your app.
 
 ## How to use
 
 ### simple-grid-container
 
-Just put all your items inside this container and tell him minimum width of column. It will do all the hard work.
+Just put all your items inside this container and tell him minimum width of columns. It will do all the hard work.
 
 For example:
 
