@@ -29,7 +29,7 @@
     setup() {
       const app = getCurrentInstance()
       const breakpoints =
-        app.appContext.config.globalProperties.$vueGrid.breakpoints
+        app.appContext.config.globalProperties.$SimpleVueGrid.breakpoints
 
       const windowWidth = ref(window.innerWidth)
       onMounted(() => {

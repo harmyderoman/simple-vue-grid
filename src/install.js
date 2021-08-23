@@ -16,10 +16,7 @@ const SimpleVueGrid = {
    * @param app
    * @param options
    */
-  install: (
-    app,
-    options = { breakpoints: defaultBreakpoints, unwrapInjectedRef: true }
-  ) => {
+  install: (app, options = { breakpoints: defaultBreakpoints }) => {
     /**
      * Configuration object of SimpleVueGrid plugin
      * @property { Object } $SimpleVueGrid
@@ -33,19 +30,17 @@ const SimpleVueGrid = {
     for (const point in defaultBreakpoints) {
       if (Object.prototype.hasOwnProperty.call(options.breakpoints, point)) {
         breakpointsConfig[point] = parseInt(options.breakpoints[point], 10)
+      } else {
+        breakpointsConfig[point] = defaultBreakpoints[point]
       }
-      // else {
-      //   breakpointsConfig[point] = defaultBreakpoints[point]
-      // }
     }
-    // config for old Vue version, it wiil change to false by default in future
-    if (options.unwrapInjectedRef) {
-      app.config.unwrapInjectedRef = true
-    }
+    // config for old Vue version, it wiil change
+    // to false by default in future
+    app.config.unwrapInjectedRef = true
 
-    app.component("grid-container", SimpleGridContainer)
-    app.component("layout-container", SimpleLayoutContainer)
-    app.component("grid-item", SimpleGridItem)
+    app.component("simple-grid-container", SimpleGridContainer)
+    app.component("simple-layout-container", SimpleLayoutContainer)
+    app.component("simple-grid-item", SimpleGridItem)
   }
 }
 

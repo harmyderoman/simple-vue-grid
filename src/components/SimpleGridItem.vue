@@ -1,6 +1,5 @@
 <template>
   <component :is="tag" :style="itemStyles">
-    <h1>{{ currentBreakpoint }}</h1>
     <slot></slot>
   </component>
 </template>
@@ -47,12 +46,12 @@
       col() {
         const col = eval(`this.${this.currentBreakpoint}Col`)
 
-        return col ? col : undefined
+        return col ? col : false
       },
       row() {
         const row = eval(`this.${this.currentBreakpoint}Row`)
 
-        return row ? row : undefined
+        return row ? row : false
       },
       columnStyles() {
         if (this.col) {
