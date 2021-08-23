@@ -1,12 +1,12 @@
 # simple-vue-grid
 
-This pligin include containers that will help you to buil exelent layout for your app.
+This plugin include containers that will help you to build excellent layout for your app.
 
 ## How to use
 
 ### simple-grid-container
 
-Just put all your items inside this container and tell him minimal width of column. It will do all the hard work.
+Just put all your items inside this container and tell him minimum width of column. It will do all the hard work.
 
 For example:
 
@@ -18,7 +18,7 @@ For example:
   </simple-grid-container>
 ```
 
-Also you can set props:
+Also you can set follow props:
 
 - `gap` - for gap between your items.
 - `elasticColumns` - for `minmax(${this.columnWidth}, 1fr)` style
@@ -27,7 +27,7 @@ Also you can set props:
 
 ### simple-layout-container
 
-This container will help you in more complex situations. You can tell to it how to buil your layout. For example:
+This container will help you in more complex situations. You can tell to it how to build your layout. For example:
 
 - `"200px 300px 100px"`
 - `"1fr 50px 1fr 1fr"`
@@ -108,7 +108,7 @@ createApp(App)
 
 ## Contributing and Issues
 
-Contributing is welcome! This documentation also needs some improvement. For bugs and issues please open new issue [here](https://github.com/harmyderoman/simple-vue-grid/issues).
+Contribution is welcome! This documentation also needs some improvement. For bugs and issues please open new issue [here](https://github.com/harmyderoman/simple-vue-grid/issues).
 
 ## Project setup
 
