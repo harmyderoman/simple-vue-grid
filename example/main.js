@@ -1,6 +1,6 @@
 import { createApp } from "vue"
 import App from "./App.vue"
-import SimpleVueGrid from "../src/install"
+import SimpleVueGrid from "../src/install.js"
 
 const options = {
   breakpoints: {

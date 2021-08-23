@@ -1,5 +1,5 @@
 <template>
-  <layout-container
+  <simple-layout-container
     cols="repeat(5, 1fr)"
     md-cols="repeat(3, 1fr)"
     sm-cols="repeat(2, 1fr)"
@@ -7,7 +7,7 @@
     rows="90px 150px 90px"
     gap="5px"
   >
-    <grid-item
+    <simple-grid-item
       tag="span"
       class="el"
       startColumn="2"
@@ -19,11 +19,11 @@
       xs-col="0"
     >
       <h1>Grid Item</h1>
-    </grid-item>
+    </simple-grid-item>
     <div v-for="item in library" :key="item.id" class="el">
       <h1>{{ item.id }}</h1>
     </div>
-  </layout-container>
+  </simple-layout-container>
 </template>
 
 <script>
@@ -39,7 +39,6 @@
 
   export default {
     name: "App",
-    components: {},
     data() {
       return {
         toggleColumn: true,
