@@ -6,7 +6,7 @@ This plugin includes containers that will help you to build excellent layout for
 
 ### simple-grid-container
 
-Just put all your items inside this container and tell him minimum width of columns. It will do all the hard work.
+Just put all your items inside this container and tell him minimum width of columns. It will do all the hard work. The container is elastic and will adapt to all screen sizes, depending on how many columns with this width will fit on the display.
 
 For example:
 
@@ -20,18 +20,19 @@ For example:
 
 Also you can set follow props:
 
-- `gap` - for gap between your items.
-- `elasticColumns` - for `minmax(${this.columnWidth}, 1fr)` style
-- `inline` - for `inline-grid` rule default: false
-- `class` - because it is just `div` tag. You can apply all css styles, as well as to all containers in this plugin.
+- `gap` - for gap between your items.`default: none`. Add gap both to rows and columns.
+- `elastic-columns` - for `minmax(columnWidth, 1fr)` style. `default: true`. In most cases just don't change it.
+- `inline` - for `inline-grid` css rule, default: false
+- `class` - because container is just `div` tag. You can apply all css styles, as well as to all containers in this plugin. Also you can add grid rules like `row-gap` and `column-gap`.
 
 ### simple-layout-container
 
-This container will help you in more complex situations. You can tell to it how to build your layout. For example:
+This container will help you in more complex situations. You can tell to `cols` prop how to build your layout. For example:
 
-- `"200px 300px 100px"`
-- `"1fr 50px 1fr 1fr"`
-- `"repeat(5, 1fr)"`
+- `cols="200px 300px 100px"`
+- `cols="1fr 50px 1fr 1fr"`
+- `:cols="colsSchema"` - dinamic layout
+- `lg-cols"repeat(5, 1fr)"` - add `lg-` to `cols` for `lg` breakpoint schema. `lg` is `992px` by default.
 
 For more variants see [link](https://css-tricks.com/snippets/css/complete-guide-grid/#grid-template-columnsgrid-template-rows)
 
@@ -81,6 +82,7 @@ import { createApp } from "vue"
 import App from "./App.vue"
 import SimpleVueGrid from "simple-vue-grid"
 
+// optional. If you want to change all default breakpoints or part of them.
 const options = {
   breakpoints: {
     xl: 1400,
@@ -128,4 +130,10 @@ npm run serve
 
 ```
 npm run test:unit
+```
+
+### Build package
+
+```
+npm run build-library
 ```
