@@ -36,9 +36,26 @@ This container will help you in more complex situations. You can tell to `cols` 
 
 For more variants see [link](https://css-tricks.com/snippets/css/complete-guide-grid/#grid-template-columnsgrid-template-rows)
 
+Props:
+
+- `gap` - same as `simple-grid-container`
+- `inline` - for inline container. default: false
+- `cols` - cols Schema
+- `rows` - rows Schema
+- `'breakpoint'-cols` - set cols Schema for specific breakpoint
+- `'breakpoint'-rows` - set rows Schema for specific breakpoint
+
 ### simple-layout-item
 
 Grid item container help you locate your item on layout that you built in `simple-layout-container`. The location can be changed depending on the width of the screen.
+
+Props:
+
+- `tag` - html tag of item container. `default: "div"`
+- `startColumn` - start column of item
+- `columnSpan` - the number of columns it occupies
+- `startRow` - start row of item
+- `rowSpan` - the number of rows it occupies
 
 Full example:
 
@@ -68,7 +85,7 @@ Full example:
   </simple-layout-container>
 ```
 
-## Instalation
+## Installation
 
 ### NPM
 
