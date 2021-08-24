@@ -28,7 +28,6 @@
   ],
   "scripts": {
     "serve": "vue-cli-service serve --open example/main",
-    "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "build-library": "vue-cli-service build --target lib --name simple-vue-grid ./src/install.js"
   },
