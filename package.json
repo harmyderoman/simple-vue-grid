@@ -19,12 +19,7 @@
     "url": "https://github.com/harmyderoman"
   },
   "files": [
-    "dist/*",
-    "src/*",
-    "public/*",
-    "*.json",
-    "*.js",
-    "README.md"
+    "dist/*"
   ],
   "scripts": {
     "serve": "vue-cli-service serve --open example/main",
