@@ -91,7 +91,7 @@ Full example:
 ### NPM
 
 ```
-vue add simple-vue-grid
+npm i simple-vue-grid
 ```
 
 ```
