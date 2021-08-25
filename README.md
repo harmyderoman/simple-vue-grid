@@ -1,5 +1,6 @@
 # simple-vue-grid
 
+Only Vue 3 for now!
 This plugin includes containers that will help you to build excellent layout for your app.
 
 ## How to use
