@@ -1,7 +1,49 @@
 # simple-vue-grid
 
 Only Vue 3 for now!
-This plugin includes containers that will help you to build excellent layout for your app.
+This plugin includes 3 global components: `simple-grid-container`,`simple-layout-container` and `simple-grid-item`,that will help you to build excellent layout for your app.
+
+## Installation
+
+### NPM
+
+```
+npm i simple-vue-grid
+```
+
+```
+// main.js
+import { createApp } from "vue"
+import App from "./App.vue"
+import SimpleVueGrid from "simple-vue-grid"
+
+// optional. If you want to change all default breakpoints or part of them.
+const options = {
+  breakpoints: {
+    xl: 1400,
+    xxl: "1920px"
+  }
+}
+
+createApp(App)
+  .use(SimpleVueGrid, options)
+  .mount("#app")
+```
+
+And now plugin is ready to use! All containers is registered globally.
+
+## Default breakpoints:
+
+```
+{
+  xs: 0,
+  sm: 576,
+  md: 768,
+  lg: 992,
+  xl: 1200,
+  xxl: 1400
+}
+```
 
 ## How to use
 
@@ -86,45 +128,12 @@ Full example:
   </simple-layout-container>
 ```
 
-## Installation
+## Plans
 
-### NPM
-
-```
-npm i simple-vue-grid
-```
-
-```
-// main.js
-import { createApp } from "vue"
-import App from "./App.vue"
-import SimpleVueGrid from "simple-vue-grid"
-
-// optional. If you want to change all default breakpoints or part of them.
-const options = {
-  breakpoints: {
-    xl: 1400,
-    xxl: "1920px"
-  }
-}
-
-createApp(App)
-  .use(SimpleVueGrid, options)
-  .mount("#app")
-```
-
-## Default breakpoints:
-
-```
-{
-  xs: 0,
-  sm: 576,
-  md: 768,
-  lg: 992,
-  xl: 1200,
-  xxl: 1400
-}
-```
+- Make it work with Vue 2
+- TypeScript
+- Tests
+- Masonry container
 
 ## Contributing and Issues
 
