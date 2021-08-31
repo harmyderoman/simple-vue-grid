@@ -5,6 +5,8 @@
 </template>
 
 <script>
+  import { useWindowWidth } from "@/store"
+
   export default {
     props: {
       tag: {
@@ -41,15 +43,22 @@
       xxlCol: String,
       xxlRow: String
     },
-    inject: ["currentBreakpoint"],
+    setup() {
+      const { breakpoint } = useWindowWidth()
+
+      return {
+        breakpoint
+      }
+    },
+    // inject: ["currentBreakpoint"],
     computed: {
       col() {
-        const col = eval(`this.${this.currentBreakpoint}Col`)
+        const col = eval(`this.${this.breakpoint}Col`)
 
         return col ? col : false
       },
       row() {
-        const row = eval(`this.${this.currentBreakpoint}Row`)
+        const row = eval(`this.${this.breakpoint}Row`)
 
         return row ? row : false
       },

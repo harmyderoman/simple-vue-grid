@@ -24,6 +24,31 @@
       <h1>{{ item.id }}</h1>
     </div>
   </simple-layout-container>
+  <simple-layout-container
+    cols="repeat(5, 1fr)"
+    md-cols="repeat(3, 1fr)"
+    sm-cols="repeat(2, 1fr)"
+    lg-cols="repeat(4, 1fr)"
+    rows="90px 150px 90px"
+    gap="5px"
+  >
+    <simple-grid-item
+      tag="span"
+      class="el"
+      startColumn="2"
+      columnSpan="2"
+      startRow="2"
+      row-span="2"
+      md-col="1"
+      sm-col="1"
+      xs-col="0"
+    >
+      <h1>Grid Item</h1>
+    </simple-grid-item>
+    <div v-for="item in library" :key="item.id" class="el">
+      <h1>{{ item.id }}</h1>
+    </div>
+  </simple-layout-container>
 </template>
 
 <script>

@@ -28,13 +28,9 @@
       xxlRows: String
     },
     setup() {
-      const app = getCurrentInstance()
-      // const breakpoints =
-      //   app.appContext.config.globalProperties.$SimpleVueGrid.breakpoints
+      const { breakpoint } = useWindowWidth()
 
-      const { windowWidth, breakpoint } = useWindowWidth()
-
-      provide("currentBreakpoint", breakpoint)
+      // provide("currentBreakpoint", breakpoint)
 
       return {
         breakpoint
