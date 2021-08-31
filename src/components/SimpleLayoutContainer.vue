@@ -7,6 +7,7 @@
 <script>
   import BaseSimpleContainer from "../mixins/BaseSimpleContainer"
   import { ref, provide, computed, onMounted, getCurrentInstance } from "vue"
+  import { useWindowWidth } from "@/store"
 
   export default {
     mixins: [BaseSimpleContainer],
@@ -27,28 +28,9 @@
       xxlRows: String
     },
     setup() {
-      const app = getCurrentInstance()
-      const breakpoints =
-        app.appContext.config.globalProperties.$SimpleVueGrid.breakpoints
+      const { breakpoint } = useWindowWidth()
 
-      const windowWidth = ref(window.innerWidth)
-      onMounted(() => {
-        window.onresize = () => {
-          windowWidth.value = window.innerWidth
-        }
-      })
-      const breakpoint = computed(() => {
-        let result
-        const Points = breakpoints
-        for (let point in Points) {
-          if (Points[point] <= windowWidth.value) {
-            result = point
-          }
-        }
-
-        return result
-      })
-      provide("currentBreakpoint", breakpoint)
+      // provide("currentBreakpoint", breakpoint)
 
       return {
         breakpoint
