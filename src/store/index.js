@@ -1,4 +1,4 @@
-import { ref, onMounted, computed } from "vue"
+import { ref, onMounted, onUnmounted, computed } from "vue"
 
 const windowWidth = ref(window.innerWidth)
 const defaultBreakpoints = {
@@ -12,11 +12,16 @@ const defaultBreakpoints = {
 const breakpoints = {}
 
 export const useWindowWidth = function(outsideSetup = false) {
+  function getWindowWidth() {
+    windowWidth.value = window.innerWidth
+  }
   if (!outsideSetup) {
     onMounted(() => {
-      window.onresize = () => {
-        windowWidth.value = window.innerWidth
-      }
+      window.onresize = getWindowWidth
+    })
+
+    onUnmounted(() => {
+      window.removeEventListener("onresize", getWindowWidth)
     })
   }
   const breakpoint = computed(() => {
