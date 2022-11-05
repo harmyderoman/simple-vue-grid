@@ -1,7 +1,7 @@
 {
   "name": "simple-vue-grid",
   "description": "A simple Vue.js grid containers that will make your life easier.",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": false,
   "main": "./dist/simple-vue-grid.common.js",
   "repository": "https://github.com/harmyderoman/simple-vue-grid",
